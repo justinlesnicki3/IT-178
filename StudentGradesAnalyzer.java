@@ -32,7 +32,8 @@ public class StudentGradesAnalyzer {
             
             double averageGrade = totalGrades / students.length;
             
-            Arrays.sort(students, (s1, s2) -> s1.getName().compareTo(s2.getName()));
+            //found this way of sorting off Baeldung.com, article written by Uzma Khan
+            Arrays.sort(students, (first, second) -> first.getName().compareTo(second.getName()));
 
             System.out.println("Average Grade: " + averageGrade);
             System.out.println("Highest Grade: " + highestGrade);
@@ -40,7 +41,7 @@ public class StudentGradesAnalyzer {
             
             System.out.println("Sorted List of Students: ");
             for(int i = 0; i < students.length; i++) {
-            	System.out.println(students[i].getName());
+            	System.out.println(students[i].getName() + " " + students[i].getGrade());
             }
             
             
