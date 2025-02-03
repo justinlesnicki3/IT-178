@@ -2,14 +2,38 @@ package edu.ilstu;
 
 public class CheckingAccount extends BankAccount {
 	
+	public final double DEFAULT_FEE = 5.00;
+	private double monthlyFee;
+	
 	public CheckingAccount() {
 		super();
-		System.out.println("In checkingAmount " + " default constructor");
+		monthlyFee = DEFAULT_FEE;
 	}
 	
-	public CheckingAccount(double balance) {
+	public CheckingAccount(double balance, double monthlyFee) {
 		super(balance);
-		System.out.println("In checkingAccount " + "overloaded constructor");
+		setMonthlyFee(monthlyFee);
+	}
+	
+	public CheckingAccount applyMonthlyFee() {
+		balance -= monthlyFee;
+		
+		return this;
+	}
+	
+	public double getMonthlyFee() {
+		return monthlyFee;
+	}
+	
+	public CheckingAccount setMonthlyFee(double monthlyFee) {
+		if(monthlyFee >= 0.0)
+			this.monthlyFee = monthlyFee;
+		
+		return this;
+	}
+	
+	public String toString() {
+		return super.toString() + "; monthly fee is " + MONEY.format(monthlyFee);
 	}
 
 }

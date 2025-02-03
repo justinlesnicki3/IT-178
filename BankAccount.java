@@ -4,19 +4,14 @@ import java.text.DecimalFormat;
 public class BankAccount {
 	
 	public final DecimalFormat MONEY = new DecimalFormat("$#,##0.00");
-	private double balance;
+	protected double balance;
 	
 	public BankAccount() {
 		balance = 0.0;
-		System.out.println("In BankAccount default constructor");
 	}
 	
 	public BankAccount(double balance) {
-		if (balance >= 0.0)
-			this.balance = balance;
-		else
-			this.balance = 0.0;
-		System.out.println("In BankAccount overoaded constrcutor");
+		deposit(balance);
 	}
 	
 	public double getBalance() {
@@ -24,8 +19,9 @@ public class BankAccount {
 	}
 	
 	public BankAccount deposit(double amount) {
-		if(amount >= 0.0)
-			balance += amount;
+		if (amount >= 0.0);
+		balance += amount;
+		
 		return this;
 	}
 	
@@ -39,5 +35,4 @@ public class BankAccount {
 	public String toString() {
 		return "balance is " + MONEY.format(balance);
 	}
-
 }
