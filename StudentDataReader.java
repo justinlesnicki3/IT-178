@@ -8,8 +8,8 @@ import java.util.Arrays;
 
 public class StudentDataReader {
 	
-	public Student[] readDataFromFile(String fileName) throws IOException {
-		Student[] students = new Student[5];
+	public Student1[] readDataFromFile(String fileName) throws IOException {
+		Student1[] students = new Student1[5];
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {	
 		String line;
@@ -19,7 +19,7 @@ public class StudentDataReader {
 			String[] parts = line.split(" ");
 			String name = parts[0];
 			int grade = Integer.parseInt(parts[1]);
-			students[index++] = new Student(name, grade);
+			students[index++] = new Student1(name, grade);
 			
 			}
 		}

@@ -1,30 +1,56 @@
 package edu.ilstu;
 
+import java.util.ArrayList;
+
 public class Student {
 	
-	private int grade;
 	private String name;
+	private ArrayList<Integer> grades;
 	
-	public Student() {	
-		this.name = "noname";
-		this.grade = 00;
-	}
-	
-	public Student(String name, int grade) {
+	public Student(String name, int numberOfSubjects) {
+		
 		this.name = name;
-		this.grade = grade;
+		this.grades = new ArrayList<>();
+		
+		for(int i = 0; i < numberOfSubjects; i++) {
+			grades.add(-1);
+		}
+		
 	}
 	
-		public String getName() {
+	public void setGrade(int indexOfSubject, int grade) {
+		grades.set(indexOfSubject, grade);
+	}
+	
+	public int getGrade(int indexOfSubject) {
+		
+		return grades.get(indexOfSubject);
+		
+	}
+	
+	public String getName() {
 		return name;
 	}
+	
+	public double calculateAverage() {
 		
-	public int getGrade() {
-		return grade;
+		int total = 0;
+		int count = 0;
+		
+		for(int i = 0; i < grades.size(); i++) {
+			int grade = grades.get(i);
+			if(grade != -1) {
+				total += grade;
+				count++;
+			}
+		}
+		
+		if (count == 0) {
+			return 0;
+		}
+		return (double) total / count;
 	}
 	
-	public String toString() {
-		return name + " " + grade;
-	}
-	 
+	
+
 }

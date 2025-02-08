@@ -10,7 +10,7 @@ public class StudentGradesAnalyzer {
 
         try {
             StudentDataReader reader = new StudentDataReader();
-            Student[] students = reader.readDataFromFile("grades.txt");
+            Student1[] students = reader.readDataFromFile("grades.txt");
 
             double totalGrades = 0;
             
