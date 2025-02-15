@@ -58,17 +58,17 @@ public class GradeManagementSystem {
         	
         }
         
-        System.out.println("\nAverage Grade Per Student");
+        System.out.println("\nAverage Grade for each Student");
         for(int i = 0; i < students.length; i++) {
         	System.out.println(students[i].getName() + ": " + students[i].calculateAverage());
         }
         
-        System.out.println("\nAverage Grade per Subject");
+        System.out.println("\nAverage Grade for each Subject");
         for(int i = 0; i < subjects.length; i++) {
         	System.out.println(subjects[i].getName() + ": " + subjects[i].calculateAverage());
         }
         
-        System.out.println("\nHighest and Lowest Grades per Subject:");
+        System.out.println("\nHighest and Lowest Grades for each Subject:");
         for(int i = 0; i < subjects.length; i++) {
         	System.out.println(subjects[i].getName() + " - Highest: " + subjects[i].getHighestGrade() + ", Lowest: " + subjects[i].getLowestGrade());
         }
