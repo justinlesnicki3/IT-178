@@ -17,7 +17,9 @@ public class FrequencyOfA {
 		if(s.length()==0)
 			return 0;
 		else if(s.charAt(s.length()-1)=='A')
-			return (1 + countNumberOfARecursive(s.substring(0,s.length()-1)));
+			return (1 + countNumbersOfARecursive(s.substring(0,s.length()-1)));
+		else
+			return(countNumbersOfARecursive(s.substring(0,s.length()-1)));
 	}
 
 }

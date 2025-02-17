@@ -5,7 +5,7 @@ public class EmployeeDriver {
 	public static void main(String[] args) {
 		
 		BaseEmployee e = new FullTimeEmployee();
-		Employee e2 = new Manager();
+		Employee1 e2 = new Manager();
 		String role = e2.getRole();
 		double salary = e2.calculateSalary();
 		System.out.println("Slary: " + salary);

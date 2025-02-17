@@ -10,15 +10,15 @@ public class PromptForDollar {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter a word containing $: ");
 		String word = scan.next();
-		while(!checkForDollarRecursive(word)) {
+	//	while(!checkForDollarRecursive(word)) {
 			System.out.print("Enter a word containing a $: ");
 			word = scan.next();
 		}
-		System.out.println("");
+	//	System.out.println("");
 
 		
 		
 		
 	}
 
-}
+

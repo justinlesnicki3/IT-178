@@ -1,6 +1,6 @@
 package edu.ilstu;
 
-public abstract class BaseEmployee implements Employee {
+public abstract class BaseEmployee implements Employee1 {
 	
 	private String name;
 	

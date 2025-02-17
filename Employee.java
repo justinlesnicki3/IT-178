@@ -1,8 +1,18 @@
 package edu.ilstu;
 
-public interface Employee {
+public abstract class Employee implements Payable {
 	
-	public double calculateSalary();
-	public String getRole();
+	String name;
+	int employeeId; 
+	
+	public Employee(String name, int employeeId) {
+		this.name = name;
+		this.employeeId = employeeId;
+	}
+	
+	public void displayDetails() {
+		
+	}
+	
 
 }
